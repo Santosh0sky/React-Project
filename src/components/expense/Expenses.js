@@ -4,10 +4,11 @@ import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 
 const Expenses = (props) => {
+    console.log(props.expense);
 return(
     <Card className = "expenses">
-        {
-            props.expense.map((expense)=>{
+        
+        { (props.expense).map((expense)=>{
                 return(
                 <ExpenseItem key = {expense.id} 
                 date = {expense.date}
