@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = (props) =>{
-
     //using one useState and passing an object in useState
     /*const [userInput, setUserInput] = useState({
         setEnteredTitle: "",
@@ -66,6 +65,10 @@ const ExpenseForm = (props) =>{
         setentEnteredAmount("");
     }
 
+    const cancelButtonClickHandler = () =>{
+        props.onCancel();
+    }
+
     return (<form onSubmit={formSubmitHandler}>
         <div className="new-expense__controls">
             <div className="new-expense__control">
@@ -82,6 +85,7 @@ const ExpenseForm = (props) =>{
             </div>
         </div>
         <div className="new-expense__actions">
+            <button type ="button" onClick={cancelButtonClickHandler}>Cancel</button>
             <button type="submit">Add Expense</button>
         </div>
     </form>)
